@@ -32,7 +32,7 @@ theme: /
 
     state: NoMatch
         event!: noMatch
-        a: Извините, я вас не понял. Вы сказали: {{$request.query}}. Вы можете сказать привет, погода или курс
+        a: Извините, я не понял, что вы хотели. Вы сказали: {{$request.query}}.
 
     state: Match
         event!: match

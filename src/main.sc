@@ -16,12 +16,19 @@ theme: /
         q!: *weather
         q!: * (~weather)*
         q!: * (погод*)*
+        q!: * (солн*) *
+        q!: * (влаж*) *
+        q!: * (дожд*) *
         a: Current weather in Saint Petersburg is cloudy, -2 С
 
     state: Currency
         q!: * (~currency) *
         q!: * (~rate) *
         q!: * (~курс) *
+        q!: * (валют*) *
+        q!: * (валют*) *
+        q!: * (руб*) *
+        q!: * (долл*) *
         a: Current currency exchange rates - USDRUB: 76.02, EURRUB: 80.48
 
     state: NoMatch

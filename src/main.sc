@@ -7,9 +7,8 @@ theme: /
         q!: * (~hello) *
         q!: * (привет/здравствуй*) *
         random: 
-            a: Hello!
-            a: Hi!
-            a: Greetings!
+            a: Привет!
+            a: Здравствуй!
         intent: /hello || toState = "./"
 
     state: Weather
@@ -19,7 +18,7 @@ theme: /
         q!: * (солн*) *
         q!: * (влаж*) *
         q!: * (дожд*) *
-        a: Current weather in Saint Petersburg is cloudy, -2 С
+        a: Сегодня в Санкт-петербурге облачно, без осадков, температура -2 градуса по Цельсию
 
     state: Currency
         q!: * (~currency) *
@@ -29,11 +28,11 @@ theme: /
         q!: * (валют*) *
         q!: * (руб*) *
         q!: * (долл*) *
-        a: Current currency exchange rates - USDRUB: 76.02, EURRUB: 80.48
+        a: Текущие крусы валют - доллар: 76.02, евро: 80.48
 
     state: NoMatch
         event!: noMatch
-        a: I do not understand. You said: {{$request.query}}
+        a: Извините, я вас не понял. Вы сказали: {{$request.query}}. Вы можете сказать привет, погода или курс
 
     state: Match
         event!: match

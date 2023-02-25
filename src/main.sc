@@ -1,17 +1,15 @@
-require: slotfilling/slotFilling.sc
-  module = sys.zb-common
 theme: /
-    state: Hello
+    state: /hello
         q!: $regex</start>
         q!: * (start) *
         q!: * (~hello) *
-        q!: * (привет/здравствуй*) *
+        q!: * (прив*/здравствуй*) *
         random: 
             a: Привет!
             a: Здравствуй!
         intent: /hello || toState = "./"
 
-    state: Weather
+    state: /weather
         q!: *weather
         q!: * (~weather)*
         q!: * (погод*)*
@@ -20,20 +18,16 @@ theme: /
         q!: * (дожд*) *
         a: Сегодня в Санкт-петербурге облачно, без осадков, температура -2 градуса по Цельсию
 
-    state: Currency
+    state: /currency
         q!: * (~currency) *
         q!: * (~rate) *
-        q!: * (~курс) *
+        q!: * (курс*) *
         q!: * (валют*) *
         q!: * (валют*) *
         q!: * (руб*) *
         q!: * (долл*) *
         a: Текущие крусы валют - доллар: 76.02, евро: 80.48
 
-    state: NoMatch
+    state: /noMatch
         event!: noMatch
         a: Извините, я не понял, что вы хотели. Вы сказали: {{$request.query}}.
-
-    state: Match
-        event!: match
-        a: {{$context.intent.answer}}

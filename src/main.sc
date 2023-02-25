@@ -8,7 +8,7 @@ theme: /
             a: Привет!
             a: Здравствуй!
 
-        state: /weather
+        state: /hello/weather
             q: *weather
             q: * (~weather)*
             q: * (погод*)*
@@ -17,7 +17,7 @@ theme: /
             q: * (дожд*) *
             a: Сегодня в Санкт-петербурге облачно, без осадков, температура -2 градуса по Цельсию
 
-        state: /currency
+        state: /hello/currency
             q: * (~currency) *
             q: * (~rate) *
             q: * (курс*) *

@@ -22,6 +22,6 @@ theme: /
         q!: * (долл*) *
         a: Текущие крусы валют - доллар: 76.02, евро: 80.48
 
-    state: noMatch
+    state: NoMatch
         event!: noMatch
         a: Извините, я не понял, что вы хотели. Вы сказали: {{$request.query}}.
